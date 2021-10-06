@@ -1,0 +1,17 @@
+:root {
+  /* Colors - main page */
+  --color-black: #151429;
+  --color-white: #fff;
+  --color-blue: #02238f;
+  --color-light-grey: #dee2e4;
+  --color-pink: #fa8080;
+  --color-yellow: #ffda62;
+
+  /* Colors - 'Ask a question' popover */
+  --color-form-violet: #3d3683;
+  --color-form-hotpink: #ef2e78;
+  --color-form-grey: #8a8b8e;
+  --color-form-black: #404040;
+  --color-form-input-border: #abacad;
+  --color-form-asterisk-icon: #959ba1;
+}
