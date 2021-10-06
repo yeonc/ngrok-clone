@@ -15,3 +15,143 @@
   --color-form-input-border: #abacad;
   --color-form-asterisk-icon: #959ba1;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Reset CSS */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 18px;
+  color: var(--color-black);
+}
+
+.header-logo img {
+  display: block;
+  height: 42px;
+}
+
+.header-menu-button {
+  width: 32px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url('./images/menu.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.header-gnb,
+.header-button-group {
+  display: none;
+}
+
+/* Small size (width >= 462px) */
+@media screen and (min-width: 462px) {
+  /* Header */
+  header {
+    padding: 0 30px;
+  }
+
+  .header-logo img {
+    height: 48px;
+  }
+}
+
+/* Medium size (width >= 750px) */
+@media screen and (min-width: 750px) {
+  /* Header */
+  .header-logo img {
+    height: 50px;
+  }
+}
+
+/* Large size (width >= 974px) */
+@media screen and (min-width: 974px) {
+  /* Header */
+  header {
+    height: 70px;
+    font-size: 17px;
+    line-height: 1.1764705882;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .header-logo img {
+    height: 56px;
+  }
+
+  .header-menu-button {
+    display: none;
+  }
+
+  .header-gnb,
+  .header-button-group {
+    display: block;
+  }
+
+  .header-gnb .menu-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-gnb .menu-item {
+    margin-right: 20px;
+  }
+
+  .header-gnb .menu-item:last-child {
+    margin-right: 0;
+  }
+
+  .header-gnb .menu-item:last-child a::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    background-image: url('./images/download-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .header-button-group a:first-child {
+    margin-right: 20px;
+  }
+
+  .header-gnb .menu-item a:hover,
+  .header-button-group a:first-child:hover {
+    border-bottom: 2px solid var(--color-pink);
+  }
+
+  .header-button-group a:last-child {
+    padding: 8px 24px;
+    border: 2px solid var(--color-black);
+    border-radius: 50px;
+    transition: color 300ms ease-out, background-color 300ms ease-out;
+  }
+
+  .header-button-group a:last-child:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
+}
