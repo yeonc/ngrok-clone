@@ -66,6 +66,106 @@ header {
   display: none;
 }
 
+/* introduction */
+.introduction {
+  padding: 40px 20px;
+  color: var(--color-black);
+  background: linear-gradient(211deg, #f3f3f3, hsla(0, 0%, 100%, 0) 20%);
+  text-align: center;
+}
+
+.introduction .horizontal {
+  margin-bottom: 40px;
+}
+
+.introduction .horizontal .left {
+  margin-bottom: 40px;
+}
+
+.introduction-title {
+  margin-bottom: 40px;
+  font-size: 35px;
+  line-height: 1.2;
+  letter-spacing: -0.043em;
+  font-weight: 400;
+}
+
+.introduction-title span {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: var(--color-pink);
+  text-decoration-skip-ink: none;
+}
+
+.introduction-description {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.6666666667;
+  letter-spacing: -0.005em;
+}
+
+.introduction-button {
+  display: block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  line-height: 1.9333333333;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  transition: background-color 300ms ease-out;
+}
+
+.introduction-button:hover {
+  background-color: #0832bb;
+}
+
+.introduction-demo {
+  width: 100%;
+}
+
+.introduction .logo-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.introduction .logo-group a {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.introduction .logo-group a:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.introduction .logo-group img {
+  display: block;
+  width: 100px;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.introduction .company-etc {
+  font-size: 17px;
+  line-height: 1.7058823529;
+}
+
+.introduction .company-etc a {
+  /* display: inline-block; */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-yellow);
+  text-underline-offset: 4px;
+}
+
+.introduction .company-etc a:hover {
+  text-decoration-thickness: 4px;
+}
+
 /* Small size (width >= 462px) */
 @media screen and (min-width: 462px) {
   /* Header */
