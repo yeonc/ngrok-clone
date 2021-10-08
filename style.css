@@ -201,6 +201,7 @@ header {
   .introduction-button {
     display: inline-block;
     padding: 9px 30px;
+    font-size: 17px;
   }
 
   .introduction .logo-group {
