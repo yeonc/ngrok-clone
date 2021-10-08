@@ -321,4 +321,49 @@ header {
     color: var(--color-white);
     background-color: var(--color-black);
   }
+
+  /* Introduction */
+  .introduction {
+    padding: 125px 20px 40px;
+    text-align: left;
+  }
+
+  .introduction .horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 200px;
+  }
+
+  .introduction .horizontal .left {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+
+  .introduction-title {
+    font-size: 53px;
+    line-height: 1.1132075472;
+    letter-spacing: -0.028em;
+  }
+
+  .introduction-description {
+    margin: 0 0 40px;
+  }
+
+  .introduction-demo {
+    flex-grow: 1;
+    max-width: 495px;
+  }
+
+  .introduction .logo-group {
+    justify-content: space-between;
+    max-width: 880px;
+    margin: 0 auto 10px;
+  }
+
+  .introduction .company-etc {
+    display: block;
+    text-align: center;
+  }
 }
