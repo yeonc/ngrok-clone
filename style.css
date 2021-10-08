@@ -193,7 +193,8 @@ header {
   }
 
   .introduction-description {
-    margin-bottom: 20px;
+    max-width: 450px;
+    margin: 0 auto 20px;
     line-height: 1.8666666667;
   }
 
