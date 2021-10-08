@@ -222,6 +222,30 @@ header {
   .header-logo img {
     height: 50px;
   }
+
+  /* Introduction */
+  .introduction .horizontal {
+    margin-bottom: 70px;
+  }
+
+  .introduction-title {
+    font-size: 48px;
+    line-height: 1.2291666667;
+    letter-spacing: -0.031em;
+  }
+
+  .introduction-description {
+    margin-bottom: 40px;
+  }
+
+  .introduction-demo {
+    width: 300px;
+  }
+
+  .introduction .logo-group {
+    justify-content: space-evenly;
+    margin-bottom: 8px;
+  }
 }
 
 /* Large size (width >= 974px) */
