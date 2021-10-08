@@ -225,6 +225,10 @@ header {
   }
 
   /* Introduction */
+  .introduction {
+    padding: 60px 30px 40px;
+  }
+
   .introduction .horizontal {
     margin-bottom: 70px;
   }
