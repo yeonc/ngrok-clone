@@ -169,6 +169,59 @@ header {
   text-decoration-thickness: 4px;
 }
 
+/* Product */
+.product {
+  padding: 25px 20px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  text-align: center;
+}
+
+.product-title {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4117647059;
+  letter-spacing: 0.106em;
+  text-transform: uppercase;
+}
+
+.product-description {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5625;
+}
+
+.product-inspector {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.product strong {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.033em;
+}
+
+.product-description-docs {
+  font-size: 17px;
+  line-height: 1.7058823529;
+}
+
+.product-description-docs a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-yellow);
+  text-underline-offset: 4px;
+}
+
+.product-description-docs a:hover {
+  text-decoration-thickness: 4px;
+}
+
 /* Small size (width >= 462px) */
 @media screen and (min-width: 462px) {
   /* Header */
