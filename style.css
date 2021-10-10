@@ -243,7 +243,6 @@ header {
 
 .testimonials .container {
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
   grid-template-columns: 100%;
   row-gap: 10px;
   padding: 0 8px;
