@@ -184,7 +184,7 @@ header {
 /* Product */
 .product {
   padding: 25px 20px;
-  color: var(--color-white);
+  color: var(--color-text-lightgrey);
   background-color: var(--color-blue);
   text-align: center;
 }
