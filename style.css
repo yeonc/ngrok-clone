@@ -359,6 +359,37 @@ header {
     font-size: 40px;
     line-height: 1.125;
   }
+
+  /* Testimonials */
+  .testimonials {
+    padding: 80px 0 120px;
+  }
+
+  .testimonials .container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    padding: 0 40px;
+  }
+
+  .testimonials .container .item {
+    padding: 30px 30px 20px;
+    text-align: left;
+  }
+
+  .testimonials-title {
+    padding: 0 40px;
+    margin-bottom: 40px;
+    line-height: 1.619047619;
+  }
+
+  .testimonials .user-image {
+    margin: 0 0 12px;
+  }
+
+  .testimonials .user-message {
+    line-height: 1.8666666667;
+  }
 }
 
 /* Medium size (width >= 750px) */
