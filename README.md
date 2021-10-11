@@ -2,13 +2,22 @@
 
 (작성 중인 문서입니다😊 2021.10.6~)
 
-https://ngrok.com
+Original : https://ngrok.com
+
+### 💻 To do list - 남은 작업들
+
+- [x] Footer 스타일링 작업 (+반응형)
+- [ ] Media query에 정의해 놓은 breakpoint와 실제 동작하는 breakpoint가 일치하지 않는 문제 해결
+- [ ] Header의 Dropdown menu 작업
+- [ ] Header의 gnb 메뉴 버튼 사용성 개선 - 클릭 타겟 범위 넓히기
+- [x] Introduction section의 타이틀에 Type.js 라이브러리 적용
+- [ ] 오른쪽 하단 Ask a question 버튼 작업
 
 ## 1) 구현 사항
 
-### 1. Responsive Web
+### 1. Responsive Web - Breakpoints: 462px, 750px, 974px
 
-- Breakpoints: 462px, 750px, 974px
+### 2. 부분적으로 반응형 Grid 적용 - Testimonial section
 
 ## 2) 어려웠던 부분
 
