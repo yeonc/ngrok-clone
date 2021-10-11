@@ -571,6 +571,39 @@ footer {
   .testimonials-title {
     padding: 0 60px;
   }
+
+  /* Footer */
+  footer {
+    padding: 50px 60px 15px;
+  }
+
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-gnb {
+    order: 1;
+  }
+
+  .footer-gnb .menu-list {
+    text-align: left;
+  }
+
+  .footer-information {
+    order: 3;
+  }
+
+  .footer-information .information-list {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .footer-logo {
+    display: block;
+    width: 110px;
+  }
 }
 
 /* Large size (width >= 974px) */
