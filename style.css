@@ -473,7 +473,7 @@ header {
     display: block;
   }
 
-  .header-gnb .menu-items {
+  .header-gnb .menu-list {
     display: flex;
     align-items: center;
   }
