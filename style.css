@@ -3,10 +3,11 @@
   --color-black: #151429;
   --color-white: #fff;
   --color-blue: #02238f;
-  --color-text-lightgrey: #dee2e4;
-  --color-card-lightgrey: #f0f4f6;
   --color-pink: #fa8080;
   --color-yellow: #ffda62;
+  --color-indigo: #1f1e37;
+  --color-text-lightgrey: #dee2e4;
+  --color-card-lightgrey: #f0f4f6;
 
   /* Colors - 'Ask a question' popover */
   --color-form-violet: #3d3683;
