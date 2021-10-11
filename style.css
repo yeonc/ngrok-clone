@@ -487,6 +487,32 @@ footer {
   .testimonials .user-message {
     line-height: 1.8666666667;
   }
+
+  /* footer */
+  footer {
+    height: auto;
+    padding: 40px 20px 15px;
+  }
+  .footer-title {
+    line-height: 1.619047619;
+  }
+
+  .footer-button {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 1.7058823529;
+    transition: all 300ms;
+  }
+
+  .footer-gnb .menu-item {
+    font-size: 15px;
+    line-height: 1.4666666667;
+  }
+
+  .footer-information {
+    font-size: 15px;
+    line-height: 1.4666666667;
+  }
 }
 
 /* Medium size (width >= 750px) */
