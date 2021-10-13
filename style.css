@@ -109,6 +109,9 @@ header {
   margin: 0 auto;
   background-color: var(--color-white);
   transform: translateY(100px);
+  animation-name: show-header-dropdown;
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
 }
 
 .dropdown-gnb .menu-item {
@@ -154,6 +157,16 @@ header {
 .header-gnb,
 .header-button-group {
   display: none;
+}
+
+@keyframes show-header-dropdown {
+  from {
+    transform: translateY(-660px);
+  }
+
+  to {
+    transform: translateY(100px);
+  }
 }
 
 /* introduction */
