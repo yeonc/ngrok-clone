@@ -1,5 +1,19 @@
 'use strict';
 
+const headerMenuButton = document.querySelector('.header-menu-button');
+const dropdownMenu = document.querySelector('.header-dropdown');
+const dropdownCloseButton = document.querySelector(
+  '.header-dropdown .close-button'
+);
+
+headerMenuButton.addEventListener('click', () => {
+  dropdownMenu.classList.remove('hidden');
+});
+
+dropdownCloseButton.addEventListener('click', () => {
+  dropdownMenu.classList.add('hidden');
+});
+
 // Typed.js
 const options = {
   strings: [
