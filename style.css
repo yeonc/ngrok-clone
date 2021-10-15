@@ -470,6 +470,40 @@ footer {
   opacity: 0.2;
 }
 
+/* Ask a question widget */
+.widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 14px;
+  height: 54px;
+  padding: 0 12px;
+  border-radius: 30px 12px 30px 12px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 3;
+  letter-spacing: 0.031em;
+  color: var(--color-white);
+  background-color: var(--color-form-violet);
+}
+
+.widget:focus {
+  outline: 2px solid var(--color-form-hotpink);
+}
+
+.widget::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 18px;
+  margin-right: 8px;
+  background-image: url('./images/envelope.svg');
+  background-size: contain;
+}
+
 /* Small size (width >= 462px) */
 @media screen and (min-width: 462px) {
   /* Header */
