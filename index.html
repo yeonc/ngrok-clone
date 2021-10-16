@@ -358,34 +358,39 @@
           <form action="#" method="POST">
             <span class="description">&#42; Indicates a required field</span>
 
-            <label for="name">Name&#42;</label>
-            <input id="name" type="text" placeholder="Your name..." required />
-            <img
-              class="asterisk"
-              src="./images/asterisk.svg"
-              alt="Required field"
-            />
+            <label class="user-name">
+              Name&#42;
+              <input type="text" placeholder="Your name..." required />
+              <img
+                class="asterisk"
+                src="./images/asterisk.svg"
+                alt="Required field"
+              />
+            </label>
 
-            <label for="email">Email&#42;</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Your ngrok account email..."
-              required
-            />
-            <img
-              class="asterisk"
-              src="./images/asterisk.svg"
-              alt="Required field"
-            />
+            <label class="user-email">
+              Email&#42;
+              <input
+                type="email"
+                placeholder="Your ngrok account email..."
+                required
+              />
+              <img
+                class="asterisk"
+                src="./images/asterisk.svg"
+                alt="Required field"
+              />
+            </label>
 
-            <label for="content">Content&#42;</label>
-            <textarea id="content" required></textarea>
-            <img
-              class="asterisk"
-              src="./images/asterisk.svg"
-              alt="Required field"
-            />
+            <label class="user-message">
+              <span class="visually-hidden">Enter your message</span>&#42;
+              <textarea required></textarea>
+              <img
+                class="asterisk"
+                src="./images/asterisk.svg"
+                alt="Required field"
+              />
+            </label>
 
             <button class="send-button" type="submit">Send</button>
           </form>
@@ -393,10 +398,13 @@
 
         <footer class="form-footer">
           <a
-            class="footer-link"
+            class="form-footer-link"
             href="https://www.olark.com/live-chat-powered-by-olark?rid=1700-237-10-3483&utm_medium=widget&utm_campaign=sparrow&utm_source=1700-237-10-3483&lang=en-US&host=ngrok.com"
           >
-            <span class="text">Powered by Olark</span>
+            <span class="text">
+              Powered by
+              <img clsss="logo" src="./images/logo-olark.svg" alt="Olark" />
+            </span>
           </a>
         </footer>
       </section>
