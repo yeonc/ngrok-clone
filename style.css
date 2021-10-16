@@ -60,7 +60,7 @@ button {
 }
 
 /* Header */
-header {
+.page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -375,7 +375,7 @@ header {
 }
 
 /* Footer */
-footer {
+.page-footer {
   padding: 20px;
   height: 100vh;
   color: var(--color-white);
@@ -507,7 +507,7 @@ footer {
 /* Small size (width >= 462px) */
 @media screen and (min-width: 462px) {
   /* Header */
-  header {
+  .page-header {
     padding: 0 30px;
   }
 
@@ -614,7 +614,7 @@ footer {
   }
 
   /* footer */
-  footer {
+  .page-footer {
     height: auto;
     padding: 40px 20px 15px;
   }
@@ -715,7 +715,7 @@ footer {
   }
 
   /* Footer */
-  footer {
+  .page-footer {
     padding: 50px 60px 15px;
   }
 
@@ -751,7 +751,7 @@ footer {
 /* Large size (width >= 974px) */
 @media screen and (min-width: 974px) {
   /* Header */
-  header {
+  .page-header {
     height: 70px;
     font-size: 17px;
     line-height: 1.1764705882;
@@ -891,7 +891,7 @@ footer {
   }
 
   /* Footer */
-  footer {
+  .page-footer {
     padding: 60px 30px 15px;
   }
 
