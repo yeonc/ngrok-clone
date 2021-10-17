@@ -15,7 +15,6 @@
   --color-form-grey: #8a8b8e;
   --color-form-black: #404040;
   --color-form-input-border: #abacad;
-  --color-form-asterisk-icon: #959ba1;
 
   /* Size */
   --size-border-radius: 50px;
@@ -471,7 +470,7 @@ button {
 }
 
 /* Ask a question widget */
-.widget {
+.widget-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,13 +487,14 @@ button {
   letter-spacing: 0.031em;
   color: var(--color-white);
   background-color: var(--color-form-violet);
+  cursor: pointer;
 }
 
-.widget:focus {
+.widget-button:focus {
   outline: 2px solid var(--color-form-hotpink);
 }
 
-.widget::before {
+.widget-button::before {
   content: '';
   display: inline-block;
   width: 26px;
@@ -502,6 +502,163 @@ button {
   margin-right: 8px;
   background-image: url('./images/envelope.svg');
   background-size: contain;
+}
+
+.widget-form {
+  position: fixed;
+  right: 0;
+  bottom: 85px;
+  border-radius: 12px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.widget-form:focus {
+  outline: 2px solid var(--color-form-hotpink);
+}
+
+.widget-form.hidden {
+  display: none;
+}
+
+.form-header {
+  padding: 20px;
+  color: var(--color-white);
+  background-color: var(--color-form-violet);
+}
+
+.form-header .form-title {
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 1.625;
+  letter-spacing: 0.006em;
+}
+
+.form-header .form-description {
+  font-size: 18px;
+  line-height: 1.4444444444;
+}
+
+.form-contents {
+  height: 70vh;
+  padding: 10px 10px 0;
+  border-bottom: 1px solid rgba(149, 155, 161, 0.1);
+  color: var(--color-form-black);
+  background-color: var(--color-white);
+  overflow-y: auto;
+  transition: all 700ms ease;
+}
+
+.form-contents .description {
+  display: block;
+  margin: 16px 0 8px;
+  font-size: 16px;
+  line-height: 1;
+  text-align: right;
+}
+
+.form-contents label,
+.form-contents label input,
+.form-contents label textarea {
+  display: block;
+}
+
+.form-contents label input,
+.form-contents label textarea {
+  outline: none;
+  transition: box-shadow 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.form-contents label input:focus,
+.form-contents label textarea:focus {
+  border-color: #ced2d2;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.form-contents label {
+  position: relative;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.form-contents label input {
+  width: 100%;
+  padding: 10px 36px 10px 10px;
+  border: 1px solid var(--color-form-input-border);
+  border-radius: 6px;
+  margin-top: 4px;
+  font-size: 21px;
+  line-height: 1.3333333333;
+  color: inherit;
+}
+
+.form-contents label input::placeholder {
+  color: var(--color-form-grey);
+}
+
+.form-contents label textarea {
+  /* box-sizing: content-box; */
+  width: 100%;
+  height: 114px;
+  padding: 10px 36px 10px 10px;
+  border: 1px solid var(--color-form-input-border);
+  border-radius: 6px;
+  font-size: 21px;
+  line-height: 1;
+  color: inherit;
+}
+
+.form-contents label .asterisk {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+
+.form-contents .user-name .asterisk,
+.form-contents .user-email .asterisk {
+  right: 8px;
+  bottom: 4px;
+}
+
+.form-contents .user-message .asterisk {
+  top: 40px;
+  right: 8px;
+}
+
+.form-contents .send-button {
+  width: 100%;
+  padding: 15px 12px;
+  border-radius: var(--size-border-radius);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 0.024em;
+  color: var(--color-white);
+  background-color: var(--color-form-hotpink);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-footer {
+  height: 38px;
+  padding-right: 20px;
+  background-color: #fff;
+  text-align: right;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-footer .text {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-form-grey);
+  text-transform: lowercase;
+}
+
+.form-footer-link .logo {
+  height: 20px;
+  margin-left: 4px;
+  transform: translateY(6px);
 }
 
 /* Small size (width >= 462px) */
@@ -746,6 +903,15 @@ button {
     display: block;
     width: 110px;
   }
+
+  /* Ask a question widget */
+  .widget-form {
+    width: 50%;
+  }
+
+  .form-footer {
+    border-bottom-left-radius: 12px;
+  }
 }
 
 /* Large size (width >= 974px) */
@@ -898,5 +1064,23 @@ button {
   .footer-main {
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  /* Ask a question widget */
+  .widget-form {
+    right: 20px;
+    width: 350px;
+  }
+
+  .form-header {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .form-contents {
+    height: auto;
+  }
+
+  .form-footer {
+    border-bottom-right-radius: 12px;
   }
 }
