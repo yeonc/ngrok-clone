@@ -980,15 +980,11 @@ button {
     align-items: center;
   }
 
-  .header-gnb .menu-item {
-    margin-right: 20px;
+  .header-gnb .menu-item a {
+    padding: 0 12px;
   }
 
-  .header-gnb .menu-item:last-child {
-    margin-right: 0;
-  }
-
-  .header-gnb .menu-item:last-child a::after {
+  .header-gnb .menu-item:last-child .menu-item-text::after {
     content: '';
     display: inline-block;
     width: 12px;
@@ -1001,11 +997,11 @@ button {
   }
 
   .header-button-group a:first-child {
-    margin-right: 20px;
+    padding: 0 20px;
   }
 
-  .header-gnb .menu-item a:hover,
-  .header-button-group a:first-child:hover {
+  .header-gnb .menu-item a:hover .menu-item-text,
+  .header-button-group a:first-child:hover .header-button-text {
     border-bottom: 2px solid var(--color-pink);
   }
 
