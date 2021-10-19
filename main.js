@@ -5,6 +5,10 @@ const dropdownMenu = document.querySelector('.header-dropdown');
 const dropdownCloseButton = document.querySelector(
   '.header-dropdown .close-button'
 );
+const widgetButton = document.querySelector('.widget .widget-button');
+const widgetForm = document.querySelector('.widget-form');
+
+let isWidgetButtonClicked = false;
 
 headerMenuButton.addEventListener('click', () => {
   dropdownMenu.classList.remove('hidden');
@@ -12,6 +16,18 @@ headerMenuButton.addEventListener('click', () => {
 
 dropdownCloseButton.addEventListener('click', () => {
   dropdownMenu.classList.add('hidden');
+});
+
+widgetButton.addEventListener('click', () => {
+  if (!isWidgetButtonClicked) {
+    widgetButton.classList.add('clicked');
+    widgetForm.classList.remove('hidden');
+    isWidgetButtonClicked = true;
+  } else {
+    widgetButton.classList.remove('clicked');
+    widgetForm.classList.add('hidden');
+    isWidgetButtonClicked = false;
+  }
 });
 
 // Typed.js

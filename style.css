@@ -504,6 +504,23 @@ button {
   background-size: contain;
 }
 
+.widget-button.clicked {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.widget-button.clicked::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 0;
+  background-image: url('./images/close-popover.svg');
+}
+
+.widget-button.clicked .text {
+  display: none;
+}
+
 .widget-form {
   position: fixed;
   right: 0;
