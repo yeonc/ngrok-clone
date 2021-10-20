@@ -6,7 +6,8 @@ const dropdownCloseButton = document.querySelector(
   '.header-dropdown .close-button'
 );
 const widgetButton = document.querySelector('.widget .widget-button');
-const widgetForm = document.querySelector('.widget-form');
+const widgetFormContainer = document.querySelector('.widget-form');
+const widgetForm = document.querySelector('.form-contents form');
 
 let isWidgetButtonClicked = false;
 
@@ -21,12 +22,80 @@ dropdownCloseButton.addEventListener('click', () => {
 widgetButton.addEventListener('click', () => {
   if (!isWidgetButtonClicked) {
     widgetButton.classList.add('clicked');
-    widgetForm.classList.remove('hidden');
+    widgetFormContainer.classList.remove('hidden');
     isWidgetButtonClicked = true;
   } else {
     widgetButton.classList.remove('clicked');
-    widgetForm.classList.add('hidden');
+    widgetFormContainer.classList.add('hidden');
     isWidgetButtonClicked = false;
+  }
+});
+
+// Form 유효성 검사에서 에러가 발생한 경우, 어떤 에러가 발생했는지에 따라서 HTML 문서에 에러 메시지를 다르게 표시함
+widgetForm.addEventListener('submit', event => {
+  const formErrorWrapper = document.querySelector('.form-contents .form-error');
+  const formErrorMessage = document.querySelector(
+    '.form-contents .form-error .message'
+  );
+  const userName = document.querySelector(
+    '.form-contents .user-name input[type="text"]'
+  );
+  const userEmail = document.querySelector(
+    '.form-contents .user-email input[type="email"]'
+  );
+  const userMessage = document.querySelector(
+    '.form-contents .user-message textarea'
+  );
+  const asteriskOfUserName = document.querySelector(
+    '.form-contents .user-name .asterisk'
+  );
+  const asteriskOfUserEmail = document.querySelector(
+    '.form-contents .user-email .asterisk'
+  );
+  const asteriskOfUserMessage = document.querySelector(
+    '.form-contents .user-message .asterisk'
+  );
+
+  if (
+    !userEmail.validity.valid ||
+    !userName.validity.valid ||
+    !userMessage.validity.valid
+  ) {
+    showError();
+    event.preventDefault();
+  }
+
+  widgetForm.addEventListener('input', () => {
+    formErrorWrapper.classList.add('is-not-active');
+    userName.classList.remove('error-border');
+    userEmail.classList.remove('error-border');
+    userMessage.classList.remove('error-border');
+    asteriskOfUserName.classList.remove('error-color');
+    asteriskOfUserEmail.classList.remove('error-color');
+    asteriskOfUserMessage.classList.remove('error-color');
+  });
+
+  function showError() {
+    if (userName.validity.valueMissing) {
+      formErrorMessage.textContent = 'Please complete all required fields';
+      userName.classList.add('error-border');
+      asteriskOfUserName.classList.add('error-color');
+      userName.focus();
+    } else if (
+      userEmail.validity.valueMissing ||
+      userEmail.validity.typeMismatch
+    ) {
+      formErrorMessage.textContent = 'Please enter a valid email address';
+      userEmail.classList.add('error-border');
+      asteriskOfUserEmail.classList.add('error-color');
+      userEmail.focus();
+    } else if (userMessage.validity.valueMissing) {
+      formErrorMessage.textContent = 'Please complete all required fields';
+      userMessage.classList.add('error-border');
+      asteriskOfUserMessage.classList.add('error-color');
+      userMessage.focus();
+    }
+    formErrorWrapper.classList.remove('is-not-active');
   }
 });
 
