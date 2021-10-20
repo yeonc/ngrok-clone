@@ -470,6 +470,10 @@ button {
 }
 
 /* Ask a question widget */
+.widget.hidden {
+  display: none;
+}
+
 .widget-button {
   display: flex;
   justify-content: center;
@@ -488,6 +492,8 @@ button {
   color: var(--color-white);
   background-color: var(--color-form-violet);
   cursor: pointer;
+  animation-name: widget-button-display;
+  animation-duration: 250ms;
 }
 
 .widget-button:focus {
@@ -710,6 +716,16 @@ button {
   height: 20px;
   margin-left: 4px;
   transform: translateY(6px);
+}
+
+@keyframes widget-button-display {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes widget-form-show {

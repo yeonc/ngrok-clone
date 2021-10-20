@@ -126,6 +126,14 @@ widgetFormSendButton.addEventListener('click', event => {
   );
 });
 
+// 페이지가 로드 되고 1초 뒤에 Ask a question 버튼이 나옴
+window.addEventListener('load', () => {
+  const widget = document.querySelector('aside.widget');
+  setTimeout(() => {
+    widget.classList.remove('hidden');
+  }, 1000);
+});
+
 // Typed.js
 const options = {
   strings: [
