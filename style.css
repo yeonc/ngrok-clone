@@ -522,11 +522,15 @@ button {
 }
 
 .widget-form {
+  display: flex;
+  flex-direction: column;
   position: fixed;
+  bottom: 10vh;
   right: 0;
-  bottom: 85px;
-  border-radius: 12px;
+  height: 90vh;
   font-family: 'Noto Sans', sans-serif;
+  background-color: var(--color-white);
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
   transform-origin: bottom right;
   animation-name: widget-form-show;
   animation-duration: 250ms;
@@ -559,7 +563,7 @@ button {
 }
 
 .form-contents {
-  height: 70vh;
+  flex-grow: 1;
   padding: 10px 10px 0;
   border-bottom: 1px solid rgba(149, 155, 161, 0.1);
   color: var(--color-form-black);
@@ -693,7 +697,6 @@ button {
   padding-right: 20px;
   background-color: #fff;
   text-align: right;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .form-footer .text {
@@ -973,6 +976,7 @@ button {
   /* Ask a question widget */
   .widget-form {
     width: 50%;
+    border-bottom-left-radius: 12px;
   }
 
   .form-footer {
@@ -1132,6 +1136,8 @@ button {
   .widget-form {
     right: 20px;
     width: 350px;
+    height: auto;
+    border-radius: 12px;
   }
 
   .form-header {
@@ -1139,10 +1145,12 @@ button {
   }
 
   .form-contents {
-    height: auto;
+    flex-grow: 0;
+    height: 42vh;
   }
 
   .form-footer {
-    border-bottom-right-radius: 12px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
   }
 }
