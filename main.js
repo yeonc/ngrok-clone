@@ -8,6 +8,9 @@ const dropdownCloseButton = document.querySelector(
 const widgetButton = document.querySelector('.widget .widget-button');
 const widgetFormContainer = document.querySelector('.widget-form');
 const widgetForm = document.querySelector('.form-contents form');
+const widgetFormSendButton = document.querySelector(
+  '.widget-form .send-button'
+);
 
 let isWidgetButtonClicked = false;
 
@@ -97,6 +100,30 @@ widgetForm.addEventListener('submit', event => {
     }
     formErrorWrapper.classList.remove('is-not-active');
   }
+});
+
+// Widget form 안에 있는 SEND button을 클릭했을 때의 애니메이션
+widgetFormSendButton.addEventListener('click', event => {
+  event.target.animate(
+    [
+      { padding: '15px 12px', easing: 'ease-out' },
+      {
+        padding: '17px 12px',
+        border: '2px solid rgb(61, 54, 131)',
+        easing: 'ease-out',
+        offset: 0.4,
+      },
+      {
+        padding: '17px 12px',
+        border: '2px solid rgb(61, 54, 131)',
+        easing: 'ease-out',
+        offset: 1,
+      },
+    ],
+    {
+      duration: 600,
+    }
+  );
 });
 
 // Typed.js
