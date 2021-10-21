@@ -377,7 +377,6 @@ button {
 /* Footer */
 .page-footer {
   padding: 20px;
-  height: 100vh;
   color: var(--color-white);
   background-color: var(--color-indigo);
   text-align: center;
@@ -859,9 +858,9 @@ button {
 
   /* footer */
   .page-footer {
-    height: auto;
     padding: 40px 20px 15px;
   }
+
   .footer-title {
     line-height: 1.619047619;
   }
