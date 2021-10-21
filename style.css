@@ -185,7 +185,8 @@ button {
 }
 
 .introduction-title {
-  height: 150px;
+  min-height: 150px;
+  margin-bottom: 10px;
   font-size: 35px;
   line-height: 1.2;
   letter-spacing: -0.043em;
@@ -768,7 +769,8 @@ button {
   }
 
   .introduction-title {
-    height: 200px;
+    min-height: 200px;
+    margin-bottom: 0;
     font-size: 45px;
     line-height: 1;
     letter-spacing: -0.033em;
